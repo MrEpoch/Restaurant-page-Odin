@@ -33,6 +33,6 @@ const pCreate = (TextInside, classAdd) => {
   p.textContent = TextInside;
   p.classList.add(classAdd);
   return p;
-};
+}
 
 export { divCreate, logoDefine, h2Create, h4Create, pCreate };

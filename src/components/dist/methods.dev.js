@@ -1,22 +1,15 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: true,
+  value: true
 });
-exports.pCreate =
-  exports.h4Create =
-  exports.h2Create =
-  exports.logoDefine =
-  exports.divCreate =
-    void 0;
+exports.pCreate = exports.h4Create = exports.h2Create = exports.logoDefine = exports.divCreate = void 0;
 
 var _OneTime = _interopRequireDefault(require("./images/One-Time.png"));
 
 require("../style.css");
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var divCreate = function divCreate(InsideDiv, classAdd) {
   var div = document.createElement("div");
