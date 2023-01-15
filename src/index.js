@@ -16,9 +16,11 @@ const navMenu = {
 const text = {
   MainInfo:
     "We are restaurant with long lasting tradition, we are famous for beautiful place, forest, mountains, rivers are us. For many years we bring best possible to your plates and with good prices, we restaurant One Time are one of most enjoyable things you on your little travelling adventure can have. ",
+  MainInfo:
+    "We are restaurant with long lasting tradition, we are famous for beautiful place, forest, mountains, rivers are us. For many years we bring best possible to your plates and with good prices, we restaurant One Time are one of most enjoyable things you on your little travelling adventure can have. ",
   timeHeader: "Running hours",
   place: "You can find us at ...",
-  placeText: "123 NoPlace street TotallyRealPlace"
+  placeText: "123 NoPlace street TotallyRealPlace",
 };
 
 const contentRestaurant = () => {
@@ -37,7 +39,6 @@ const contentRestaurant = () => {
   );
 
   const aboutLoad = () => {
-
     return aboutUs;
   };
   const openingTime = () => {
@@ -58,8 +59,7 @@ const contentRestaurant = () => {
     return timeDiv;
   };
   const placeLoad = () => {
-    place.append(methods.pCreate(text.placeText, "text-place"))
-
+    place.append(methods.pCreate(text.placeText, "text-place"));
 
     return place;
   };
@@ -73,7 +73,9 @@ navbar.append(
   navMenu.restaurant,
   navMenu.contact,
   navMenu.menu
+  navMenu.menu
 );
+content.append(contentRestaurant().centerInfo);
 content.append(contentRestaurant().centerInfo);
 
 src.append(navbar, content, footer);
