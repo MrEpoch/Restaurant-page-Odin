@@ -17,9 +17,10 @@ const navMenu = {
 const text = {
   MainInfo:
     "We are restaurant with long lasting tradition, we are famous for beautiful place, forest, mountains, rivers are us. For many years we bring best possible to your plates and with good prices, we restaurant One Time are one of most enjoyable things you on your little travelling adventure can have. ",
-  MainInfo:
-    "We are restaurant with long lasting tradition, we are famous for beautiful place, forest, mountains, rivers are us. For many years we bring best possible to your plates and with good prices, we restaurant One Time are one of most enjoyable things you on your little travelling adventure can have. ",
   timeHeader: "Running hours",
+  place: "You can find us at ...",
+  placeText: "123 NoPlace street TotallyRealPlace",
+};
   place: "You can find us at ...",
   placeText: "123 NoPlace street TotallyRealPlace",
 };
@@ -27,29 +28,30 @@ const text = {
 const contentRestaurant = () => {
   const centerInfo = methods.divCreate("", "center-info");
   const aboutUs = methods.divCreate(
-    methods.h2Create("One Time", "h2-info-content"),
+    methods.h2Create(text.MainInfo, "info-content"),
     "about-container"
   );
-  const dividingLine = methods.divCreate("", "dividing-line");
   const timeDiv = methods.divCreate(
     methods.h2Create(text.timeHeader, "time-h2"),
     "time-container"
   );
+  const place = methods.divCreate(
+    methods.h2Create(text.place, "place-h2"),
+    "place-container"
+  );
 
   const aboutLoad = () => {
-    const post = methods.pCreate(text.MainInfo, "info-content")
-    aboutUs.append(post);
     return aboutUs;
   };
   const openingTime = () => {
     const days = () => {
-      const monday = methods.pCreate("   Monday:    8am - 6pm", "monday");
-      const tuesday = methods.pCreate("  Tuesday:   8am - 6pm", "tuesday");
+      const monday = methods.pCreate("Monday:    8am - 6pm", "monday");
+      const tuesday = methods.pCreate("Tuesday:   8am - 6pm", "tuesday");
       const wednesday = methods.pCreate("Wednesday: 8am - 6pm", "wednesday");
-      const thursday = methods.pCreate(" Thursday:  8am - 6pm", "thursday");
-      const friday = methods.pCreate("   Friday:    8am - 7pm", "friday");
-      const saturday = methods.pCreate(" Saturday:  8am - 10pm", "sunday");
-      const sunday = methods.pCreate("   Sunday:    8am - 10pm", "saturday");
+      const thursday = methods.pCreate("Thursday:  8am - 6pm", "thursday");
+      const friday = methods.pCreate("Friday:    8am - 7pm", "friday");
+      const saturday = methods.pCreate("Saturday:  8am - 10pm", "sunday");
+      const sunday = methods.pCreate("Sunday:    8am - 10pm", "saturday");
 
       return [monday, tuesday, wednesday, thursday, friday, saturday, sunday];
     };
@@ -58,27 +60,15 @@ const contentRestaurant = () => {
     }
     return timeDiv;
   };
-
-  centerInfo.append(aboutLoad(), dividingLine,openingTime());
-  return { centerInfo };
-};
-
-const footerRestaurant = () => {
-  const footerContent = methods.divCreate("", "footer-content");
-  const place = methods.divCreate(
-    methods.h2Create(text.place, "place-h2"),
-    "place-container"
-  );
   const placeLoad = () => {
     place.append(methods.pCreate(text.placeText, "text-place"));
 
     return place;
   };
 
-  footerContent.append(placeLoad());
-
-  return footerContent;
-}
+  centerInfo.append(aboutLoad(), openingTime(), placeLoad());
+  return { centerInfo };
+};
 
 
 navbar.append(
@@ -87,9 +77,7 @@ navbar.append(
   navMenu.contact,
   navMenu.menu
 );
-
 content.append(contentRestaurant().centerInfo);
-footer.append(footerRestaurant())
 
 src.append(navbar, content, footer);
 
