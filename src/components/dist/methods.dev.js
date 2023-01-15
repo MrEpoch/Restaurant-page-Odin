@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.h4Create = exports.logoDefine = exports.divCreate = void 0;
+exports.pCreate = exports.h4Create = exports.logoDefine = exports.divCreate = void 0;
 
 var _OneTime = _interopRequireDefault(require("./images/One-Time.png"));
 
@@ -36,3 +36,12 @@ var h4Create = function h4Create(TextInside, classAdd) {
 };
 
 exports.h4Create = h4Create;
+
+var pCreate = function pCreate(TextInside, classAdd) {
+  var p = document.createElement("p");
+  p.textContent = TextInside;
+  p.classList.add(classAdd);
+  return p;
+};
+
+exports.pCreate = pCreate;

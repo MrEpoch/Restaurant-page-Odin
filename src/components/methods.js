@@ -21,4 +21,11 @@ const h4Create = (TextInside, classAdd) => {
   return h4;
 };
 
-export { divCreate, logoDefine, h4Create };
+const pCreate = (TextInside, classAdd) => {
+  const p = document.createElement("p");
+  p.textContent = TextInside;
+  p.classList.add(classAdd);
+  return p;
+}
+
+export { divCreate, logoDefine, h4Create, pCreate };

@@ -21,29 +21,53 @@ body {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template: 1fr 4fr 1fr / 1fr;
+    grid-template-rows: 15% 90% 5%;
 }
 
 nav {
-  grid-area: 1 / 1 / 2 / 2;
+  height: 100%;
+  grid-row: 1 / span 1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr repeat(3, 2fr);
   justify-items: center;
+  border-bottom: 2px solid black;
 }
 
 nav > h4 {
+    padding-top: 30px;
     font-size: 25px;
+    letter-spacing: 1px;
 }
 
 .logo-container {
-    position: absolute;
-    height: 120px;
-    width: 100px;
-    left: 0;
-    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    height: 75%;
+    width: 80%;
 }
 
 .logo-container > img {
-    width: 80%;
-    height: 85%;
+    width: 85%;
+    height: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    background: url(./components/images/restaurant-inside.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.center-info {
+    grid-column: 2 / 3;
+    background-color: white;
+}
+
+.info-content {
+    padding: 10px;
+}
+
+footer {
+    border-top: 2px solid black;
 }
