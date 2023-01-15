@@ -1,26 +1,24 @@
 import "./style.css";
-import logo from "./components/images/One-Time.png"
+import * as methods from "./components/methods";
 
-const logoDefine = () => {
-  const img = new Image()
-  img.src = logo;
-  return img;
-}
+const src = methods.divCreate("", "src");
+const navbar = document.createElement("nav");
 
-const def = document.createElement("h4");
-def.innerHTML = "One Time"
-const src = document.createElement('div');
-const navbar = document.createElement('nav');
 const navMenu = {
-  logoContainer: (document.createElement('div')).appendChild(logoDefine()),
-  name: def,
-  about: document.createElement('h4').innerHTML = "ABOUT US",
-  menu: document.createElement('h4').innerHTML = "MENU",
+  logoContainer: methods.divCreate(methods.logoDefine(), "logo-container"),
+  restaurant: methods.h4Create("One Time", "restaurant-name"),
+  about: methods.h4Create("About us", "about"),
+  menu: methods.h4Create("Menu", "menu"),
 };
 
-navMenu.logoContainer.classList.add("logo-container")
+navbar.append(
+  navMenu.logoContainer,
+  navMenu.restaurant,
+  navMenu.about,
+  navMenu.menu
+);
 
-navbar.append(navMenu.logoContainer, navMenu.name);
 
+src.append(navbar);
 
-document.body.appendChild(navbar);
+document.body.appendChild(src);
