@@ -148,3 +148,9 @@ footer {
     border-bottom: 20px solid transparent;
 }
 
+.footer-content {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 20px solid transparent;
+}
+
