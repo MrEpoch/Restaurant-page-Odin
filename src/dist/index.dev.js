@@ -1,55 +1,19 @@
 "use strict";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 require("./style.css");
 
 var methods = _interopRequireWildcard(require("./components/methods"));
 
-function _getRequireWildcardCache() {
-  if (typeof WeakMap !== "function") return null;
-  var cache = new WeakMap();
-  _getRequireWildcardCache = function _getRequireWildcardCache() {
-    return cache;
-  };
-  return cache;
-}
+var _text;
 
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  }
-  if (
-    obj === null ||
-    (_typeof(obj) !== "object" && typeof obj !== "function")
-  ) {
-    return { default: obj };
-  }
-  var cache = _getRequireWildcardCache();
-  if (cache && cache.has(obj)) {
-    return cache.get(obj);
-  }
-  var newObj = {};
-  var hasPropertyDescriptor =
-    Object.defineProperty && Object.getOwnPropertyDescriptor;
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      var desc = hasPropertyDescriptor
-        ? Object.getOwnPropertyDescriptor(obj, key)
-        : null;
-      if (desc && (desc.get || desc.set)) {
-        Object.defineProperty(newObj, key, desc);
-      } else {
-        newObj[key] = obj[key];
-      }
-    }
-  }
-  newObj["default"] = obj;
-  if (cache) {
-    cache.set(obj, newObj);
-  }
-  return newObj;
-}
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var src = methods.divCreate("", "src");
 var navbar = document.createElement("nav");
@@ -60,34 +24,17 @@ var navMenu = {
   restaurant: methods.h4Create("One Time", "restaurant-name"),
   contact: methods.h4Create("Contact", "contact"),
   menu: methods.h4Create("Menu", "menu")
+  menu: methods.h4Create("Menu", "menu")
 };
-var text = {
-  MainInfo:
-    "We are restaurant with long lasting tradition, we are famous for beautiful place, forest, mountains, rivers are us. For many years we bring best possible to your plates and with good prices, we restaurant One Time are one of most enjoyable things you on your little travelling adventure can have. ",
-  timeHeader: "Running hours",
-  openingInfo: ""
-};
+var text = (_text = {
+  MainInfo: "We are restaurant with long lasting tradition, we are famous for beautiful place, forest, mountains, rivers are us. For many years we bring best possible to your plates and with good prices, we restaurant One Time are one of most enjoyable things you on your little travelling adventure can have. "
+}, _defineProperty(_text, "MainInfo", "We are restaurant with long lasting tradition, we are famous for beautiful place, forest, mountains, rivers are us. For many years we bring best possible to your plates and with good prices, we restaurant One Time are one of most enjoyable things you on your little travelling adventure can have. "), _defineProperty(_text, "timeHeader", "Running hours"), _defineProperty(_text, "place", "You can find us at ..."), _defineProperty(_text, "placeText", "123 NoPlace street TotallyRealPlace"), _text);
 
 var contentRestaurant = function contentRestaurant() {
   var centerInfo = methods.divCreate("", "center-info");
-<<<<<<< HEAD
-  var aboutUs = methods.divCreate(
-    methods.h2Create(text.MainInfo, "info-content"),
-    "about-container"
-  );
-  var timeDiv = methods.divCreate(
-    methods.h2Create(text.timeHeader, "time-h2"),
-    "time-container"
-  );
-  var place = methods.divCreate(
-    methods.h2Create(text.place, "place-h2"),
-    "place-container"
-  );
-=======
   var aboutUs = methods.divCreate(methods.h2Create("One Time", "h2-info-content"), "about-container");
   var dividingLine = methods.divCreate("", "dividing-line");
   var timeDiv = methods.divCreate(methods.h2Create(text.timeHeader, "time-h2"), "time-container");
->>>>>>> 11c87ee (Last commit before merge, i completed One Time homepage, next job is to make all three buttons at top work at changing page)
 
   var aboutLoad = function aboutLoad() {
     var post = methods.pCreate(text.MainInfo, "info-content");
@@ -117,20 +64,10 @@ var contentRestaurant = function contentRestaurant() {
   centerInfo.append(aboutLoad(), dividingLine, openingTime());
   return {
     centerInfo: centerInfo
+    centerInfo: centerInfo
   };
 };
 
-<<<<<<< HEAD
-navbar.append(
-  navMenu.logoContainer,
-  navMenu.restaurant,
-  navMenu.contact,
-  navMenu.menu
-);
-content.append(contentRestaurant().centerInfo);
-src.append(navbar, content, footer);
-document.body.appendChild(src);
-=======
 var footerRestaurant = function footerRestaurant() {
   var footerContent = methods.divCreate("", "footer-content");
   var place = methods.divCreate(methods.h2Create(text.place, "place-h2"), "place-container");
@@ -143,7 +80,6 @@ var footerRestaurant = function footerRestaurant() {
   footerContent.append(placeLoad());
   return footerContent;
 };
->>>>>>> 11c87ee (Last commit before merge, i completed One Time homepage, next job is to make all three buttons at top work at changing page)
 
 navbar.append(navMenu.logoContainer, navMenu.restaurant, navMenu.contact, navMenu.menu);
 content.append(contentRestaurant().centerInfo);

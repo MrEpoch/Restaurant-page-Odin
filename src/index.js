@@ -86,8 +86,8 @@ navbar.append(
   navMenu.restaurant,
   navMenu.contact,
   navMenu.menu
-  navMenu.menu
 );
+
 content.append(contentRestaurant().centerInfo);
 footer.append(footerRestaurant())
 
