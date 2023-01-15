@@ -21,7 +21,7 @@ body {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 15% 90% 5%;
+    grid-template-rows: 15% 6fr 6%;
 }
 
 nav {
@@ -54,7 +54,7 @@ nav > h4 {
 main {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    background: url(./components/images/restaurant-inside.jpg);
+    background: url(./components/images/background.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -65,7 +65,9 @@ main {
 }
 
 .info-content {
-    padding: 10px;
+    padding: 15px;
+    font-style: italic;
+    font-size: 18px;
 }
 
 footer {

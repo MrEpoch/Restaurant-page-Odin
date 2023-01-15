@@ -14,6 +14,13 @@ const logoDefine = () => {
   return img;
 };
 
+const h2Create = (TextInside, classAdd) => {
+  const h2 = document.createElement("h2");
+  h2.textContent = TextInside;
+  h2.classList.add(classAdd);
+  return h2;
+};
+
 const h4Create = (TextInside, classAdd) => {
   const h4 = document.createElement("h4");
   h4.textContent = TextInside;
@@ -28,4 +35,4 @@ const pCreate = (TextInside, classAdd) => {
   return p;
 }
 
-export { divCreate, logoDefine, h4Create, pCreate };
+export { divCreate, logoDefine, h2Create, h4Create, pCreate };
