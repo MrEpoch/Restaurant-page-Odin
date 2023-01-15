@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
 :root {
 }
 
@@ -14,14 +16,14 @@ body {
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .src {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-rows: 15% 6fr 6%;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 15% 6fr 6%;
 }
 
 nav {
@@ -34,42 +36,62 @@ nav {
 }
 
 nav > h4 {
-    padding-top: 30px;
-    font-size: 25px;
-    letter-spacing: 1px;
+  padding-top: 30px;
+  font-size: 25px;
+  letter-spacing: 1px;
 }
 
 .logo-container {
-    display: flex;
-    justify-content: flex-start;
-    height: 75%;
-    width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  height: 75%;
+  width: 80%;
 }
 
 .logo-container > img {
-    width: 85%;
-    height: 100%;
+  width: 85%;
+  height: 100%;
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    background: url(./components/images/background.jpg);
-    background-position: center;
-    background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  background: url(./components/images/background.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .center-info {
-    grid-column: 2 / 3;
-    background-color: white;
+  grid-column: 2 / 3;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .info-content {
-    padding: 15px;
-    font-style: italic;
-    font-size: 18px;
+  padding: 20px;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.time-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.time-h2 {
+  font-size: 30px;
+}
+
+.time-container > p {
+  padding: 5px;
+  font-size: 17px;
 }
 
 footer {
-    border-top: 2px solid black;
+  border-top: 2px solid black;
 }
