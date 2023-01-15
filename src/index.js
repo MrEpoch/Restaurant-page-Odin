@@ -21,9 +21,6 @@ const text = {
   place: "You can find us at ...",
   placeText: "123 NoPlace street TotallyRealPlace",
 };
-  place: "You can find us at ...",
-  placeText: "123 NoPlace street TotallyRealPlace",
-};
 
 const contentRestaurant = () => {
   const centerInfo = methods.divCreate("", "center-info");
