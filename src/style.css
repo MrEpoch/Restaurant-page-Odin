@@ -4,41 +4,48 @@
   box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300;400;500;700;900&display=swap');
 
 :root {
-}
+    --main-color: #22c55e;
+    --side-color: #bbf7d095;
+    --border-black-color: rgba(0, 0, 0, 0.54);}
 
-html,
-body {
+html {
   width: 100%;
   height: 100%;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  min-height: 100%;
+  width: 100%;
 }
 
 .src {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 15% 6fr 6%;
+  grid-template-rows: 1fr 3fr 6%;
 }
 
 nav {
-  height: 100%;
-  grid-row: 1 / span 1;
+  width: 100%;
+  grid-row: 1 / 2;
   display: grid;
   grid-template-columns: 1fr repeat(3, 2fr);
   justify-items: center;
-  border-bottom: 2px solid black;
 }
 
 nav > h4 {
-  padding-top: 30px;
+  align-self: center;
   font-size: 25px;
   letter-spacing: 1px;
+}
+
+nav > h4:hover {
+    color: var(--main-color);
+    cursor: pointer;
 }
 
 .logo-container {
@@ -62,6 +69,7 @@ main {
 }
 
 .center-info {
+  border-top: 2px solid var(--border-black-color);
   grid-column: 2 / 3;
   background-color: white;
   display: flex;
@@ -70,16 +78,42 @@ main {
   justify-content: space-between;
 }
 
+.h2-info-content {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 55px;
+}
+
 .info-content {
-  padding: 20px;
+  padding: 30px;
   font-style: italic;
-  font-size: 18px;
+  font-size: 20px;
+}
+
+.dividing-line {
+    width: 100%;
+    height: 8px;  
+    background-image: repeating-linear-gradient(to right,
+    #045c8c 0px, #c4e17f 50px,
+    #f7fdca 50px, #f7fdca 100px,
+    #e95e54 100px, #fad071 150px,
+    #09cdb0 200px,
+    #5c7cf9 100px,
+    #32135a 200px,
+    #5e867c 300px,
+    #c17994 300px,
+    #6599e2 300px,
+    #045c8c 300px,
+    #909849 200px);
+    background-size: 100% 10px;
+    background-repeat:no-repeat;
 }
 
 .time-container {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 10px;
 }
 
@@ -93,5 +127,12 @@ main {
 }
 
 footer {
-  border-top: 2px solid black;
+  border-top: 2px solid var(--border-black-color);
+  background-color: var(--side-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 20px solid transparent;
 }
