@@ -70,6 +70,7 @@ var text = {
 
 var contentRestaurant = function contentRestaurant() {
   var centerInfo = methods.divCreate("", "center-info");
+<<<<<<< HEAD
   var aboutUs = methods.divCreate(
     methods.h2Create(text.MainInfo, "info-content"),
     "about-container"
@@ -82,20 +83,27 @@ var contentRestaurant = function contentRestaurant() {
     methods.h2Create(text.place, "place-h2"),
     "place-container"
   );
+=======
+  var aboutUs = methods.divCreate(methods.h2Create("One Time", "h2-info-content"), "about-container");
+  var dividingLine = methods.divCreate("", "dividing-line");
+  var timeDiv = methods.divCreate(methods.h2Create(text.timeHeader, "time-h2"), "time-container");
+>>>>>>> 11c87ee (Last commit before merge, i completed One Time homepage, next job is to make all three buttons at top work at changing page)
 
   var aboutLoad = function aboutLoad() {
+    var post = methods.pCreate(text.MainInfo, "info-content");
+    aboutUs.append(post);
     return aboutUs;
   };
 
   var openingTime = function openingTime() {
     var days = function days() {
-      var monday = methods.pCreate("Monday:    8am - 6pm", "monday");
-      var tuesday = methods.pCreate("Tuesday:   8am - 6pm", "tuesday");
+      var monday = methods.pCreate("   Monday:    8am - 6pm", "monday");
+      var tuesday = methods.pCreate("  Tuesday:   8am - 6pm", "tuesday");
       var wednesday = methods.pCreate("Wednesday: 8am - 6pm", "wednesday");
-      var thursday = methods.pCreate("Thursday:  8am - 6pm", "thursday");
-      var friday = methods.pCreate("Friday:    8am - 7pm", "friday");
-      var saturday = methods.pCreate("Saturday:  8am - 10pm", "sunday");
-      var sunday = methods.pCreate("Sunday:    8am - 10pm", "saturday");
+      var thursday = methods.pCreate(" Thursday:  8am - 6pm", "thursday");
+      var friday = methods.pCreate("   Friday:    8am - 7pm", "friday");
+      var saturday = methods.pCreate(" Saturday:  8am - 10pm", "sunday");
+      var sunday = methods.pCreate("   Sunday:    8am - 10pm", "saturday");
       return [monday, tuesday, wednesday, thursday, friday, saturday, sunday];
     };
 
@@ -106,23 +114,39 @@ var contentRestaurant = function contentRestaurant() {
     return timeDiv;
   };
 
-  var placeLoad = function placeLoad() {
-    place.append(methods.pCreate(text.placeText, "text-place"));
-    return place;
-  };
-
-  centerInfo.append(aboutLoad(), openingTime(), placeLoad());
+  centerInfo.append(aboutLoad(), dividingLine, openingTime());
   return {
     centerInfo: centerInfo
   };
 };
 
-navbar.append(navMenu.logoContainer, navMenu.restaurant, navMenu.contact, navMenu.menu);
+<<<<<<< HEAD
+navbar.append(
+  navMenu.logoContainer,
+  navMenu.restaurant,
+  navMenu.contact,
+  navMenu.menu
+);
 content.append(contentRestaurant().centerInfo);
 src.append(navbar, content, footer);
 document.body.appendChild(src);
+=======
+var footerRestaurant = function footerRestaurant() {
+  var footerContent = methods.divCreate("", "footer-content");
+  var place = methods.divCreate(methods.h2Create(text.place, "place-h2"), "place-container");
+
+  var placeLoad = function placeLoad() {
+    place.append(methods.pCreate(text.placeText, "text-place"));
+    return place;
+  };
+
+  footerContent.append(placeLoad());
+  return footerContent;
+};
+>>>>>>> 11c87ee (Last commit before merge, i completed One Time homepage, next job is to make all three buttons at top work at changing page)
 
 navbar.append(navMenu.logoContainer, navMenu.restaurant, navMenu.contact, navMenu.menu);
 content.append(contentRestaurant().centerInfo);
+footer.append(footerRestaurant());
 src.append(navbar, content, footer);
 document.body.appendChild(src);
