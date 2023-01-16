@@ -146,5 +146,29 @@ footer {
 .card {
   margin: 30px;
   width: 40%;
-  border: 2px solid red;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+
+.h3-card {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  padding: 8px;
+}
+
+.img-card {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.img-card > img {
+  width: 90%;
+  height: 70%;
+}
+
+.card-desc {
+  font-style: italic;
+  width: 80%;
+  padding: 15px;
 }

@@ -4,6 +4,7 @@ import text from "./components/text";
 import aboutRestaurant from "./components/about";
 import menuRestaurant from "./components/menu";
 import contactRestaurant from "./components/contact";
+import logo from "./components/images/One-Time.png";
 
 const src = methods.divCreate("", "src");
 const navbar = document.createElement("nav");
@@ -13,7 +14,7 @@ const footer = document.createElement("footer");
 let mainLoad = aboutRestaurant();
 
 const navMenu = {
-  logoContainer: methods.divCreate(methods.logoDefine(), "logo-container"),
+  logoContainer: methods.divCreate(methods.ImgCreate(logo), "logo-container"),
   restaurant: methods.h4Create("One Time", "restaurant-name"),
   contact: methods.h4Create("Contact", "contact"),
   menu: methods.h4Create("Menu", "menu"),
@@ -42,7 +43,6 @@ navbar.append(
   navMenu.contact,
   navMenu.menu
 );
-
 
 const navBarChildren = navbar.children;
 const aboutBtn = navBarChildren[1];

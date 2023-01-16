@@ -11,6 +11,8 @@ var methods = _interopRequireWildcard(require("./methods"));
 
 var _text = _interopRequireDefault(require("./text"));
 
+var _foodImages = _interopRequireDefault(require("./food-images"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -32,14 +34,13 @@ function menuRestaurant() {
     };
   }
 
-  ;
-  var steak = new OneCard("steak", "none", _text["default"].steak);
-  var soup = new OneCard("soup", "none", _text["default"].soup);
-  var chicken = new OneCard("steak", "none", _text["default"].chicken);
-  var pork = new OneCard("steak", "none", _text["default"].pork);
-  var rice = new OneCard("steak", "none", _text["default"].rice);
-  var wine = new OneCard("steak", "none", _text["default"].wine);
-  var beer = new OneCard("steak", "none", _text["default"].beer);
+  var steak = new OneCard("Steak on butter", (0, _foodImages["default"])().steak, _text["default"].steak);
+  var soup = new OneCard("Tomato soup", (0, _foodImages["default"])().soup, _text["default"].soup);
+  var chicken = new OneCard("Fresh chicken with salad", (0, _foodImages["default"])().chicken, _text["default"].chicken);
+  var pork = new OneCard("Pork with pepper sauce", (0, _foodImages["default"])().pork, _text["default"].pork);
+  var rice = new OneCard("Asien special rice", (0, _foodImages["default"])().rice, _text["default"].rice);
+  var wine = new OneCard("Red wine", (0, _foodImages["default"])().wine, _text["default"].wine);
+  var beer = new OneCard("Traditional beer", (0, _foodImages["default"])().beer, _text["default"].beer);
   centerInfo.append(steak.card(), soup.card(), chicken.card(), pork.card(), rice.card(), wine.card(), beer.card());
   return centerInfo;
 }

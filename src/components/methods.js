@@ -1,4 +1,3 @@
-import logo from "./images/One-Time.png";
 import "../style.css";
 
 const divCreate = (InsideDiv, classAdd) => {
@@ -8,9 +7,9 @@ const divCreate = (InsideDiv, classAdd) => {
   return div;
 };
 
-const logoDefine = () => {
+const ImgCreate = (image) => {
   const img = new Image();
-  img.src = logo;
+  img.src = image;
   return img;
 };
 
@@ -35,4 +34,4 @@ const pCreate = (TextInside, classAdd) => {
   return p;
 };
 
-export { divCreate, logoDefine, h2Create, h4Create, pCreate };
+export { divCreate, ImgCreate, h2Create, h4Create, pCreate };

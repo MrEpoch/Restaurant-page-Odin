@@ -1,7 +1,7 @@
-import * as methods from "./methods"
+import * as methods from "./methods";
 import text from "./text";
 
-export default function aboutRestaurant()  {
+export default function aboutRestaurant() {
   const centerInfo = methods.divCreate("", "center-info");
   const aboutUs = methods.divCreate(
     methods.h2Create("One Time", "h2-info-content"),
@@ -37,5 +37,5 @@ export default function aboutRestaurant()  {
   };
 
   centerInfo.append(aboutLoad(), dividingLine, openingTime());
-  return centerInfo ;
-};
+  return centerInfo;
+}
