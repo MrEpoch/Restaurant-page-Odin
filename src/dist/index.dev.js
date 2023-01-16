@@ -46,7 +46,6 @@ var footerRestaurant = function footerRestaurant() {
 };
 
 navbar.append(navMenu.logoContainer, navMenu.restaurant, navMenu.contact, navMenu.menu);
-console.log(navbar.children);
 var navBarChildren = navbar.children;
 var aboutBtn = navBarChildren[1];
 var contactBtn = navBarChildren[2];
@@ -54,19 +53,19 @@ var menuBtn = navBarChildren[3];
 aboutBtn.addEventListener("click", function () {
   content.innerHTML = "";
   mainLoad = (0, _about["default"])();
-  content.append(mainLoad.centerInfo);
+  content.append(mainLoad);
 });
 contactBtn.addEventListener("click", function () {
   content.innerHTML = "";
   mainLoad = (0, _contact["default"])();
-  content.append(mainLoad.centerInfo);
+  content.append(mainLoad);
 });
 menuBtn.addEventListener("click", function () {
   content.innerHTML = "";
   mainLoad = (0, _menu["default"])();
-  content.append(mainLoad.centerInfo);
+  content.append(mainLoad);
 });
-content.append(mainLoad.centerInfo);
+content.append(mainLoad);
 footer.append(footerRestaurant());
 src.append(navbar, content, footer);
 document.body.appendChild(src);

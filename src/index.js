@@ -44,9 +44,6 @@ navbar.append(
 );
 
 
-console.log(navbar.children)
-
-
 const navBarChildren = navbar.children;
 const aboutBtn = navBarChildren[1];
 const contactBtn = navBarChildren[2];
@@ -55,22 +52,22 @@ const menuBtn = navBarChildren[3];
 aboutBtn.addEventListener("click", () => {
   content.innerHTML = "";
   mainLoad = aboutRestaurant();
-  content.append(mainLoad.centerInfo);
+  content.append(mainLoad);
 });
 
 contactBtn.addEventListener("click", () => {
   content.innerHTML = "";
   mainLoad = contactRestaurant();
-  content.append(mainLoad.centerInfo);
+  content.append(mainLoad);
 });
 
 menuBtn.addEventListener("click", () => {
   content.innerHTML = "";
   mainLoad = menuRestaurant();
-  content.append(mainLoad.centerInfo);
+  content.append(mainLoad);
 });
 
-content.append(mainLoad.centerInfo);
+content.append(mainLoad);
 footer.append(footerRestaurant());
 
 src.append(navbar, content, footer);

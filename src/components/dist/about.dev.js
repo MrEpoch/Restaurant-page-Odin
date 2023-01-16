@@ -49,9 +49,7 @@ function aboutRestaurant() {
   };
 
   centerInfo.append(aboutLoad(), dividingLine, openingTime());
-  return {
-    centerInfo: centerInfo
-  };
+  return centerInfo;
 }
 
 ;

@@ -27,7 +27,7 @@ body {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr 3fr 6%;
+  grid-template-rows: 10% 3fr 6%;
 }
 
 nav {
@@ -141,4 +141,10 @@ footer {
   display: flex;
   justify-content: flex-start;
   border-bottom: 20px solid transparent;
+}
+
+.card {
+  margin: 30px;
+  width: 40%;
+  border: 2px solid red;
 }

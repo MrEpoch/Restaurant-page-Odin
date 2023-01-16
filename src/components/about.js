@@ -37,5 +37,5 @@ export default function aboutRestaurant()  {
   };
 
   centerInfo.append(aboutLoad(), dividingLine, openingTime());
-  return { centerInfo };
+  return centerInfo ;
 };

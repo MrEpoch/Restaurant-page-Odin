@@ -5,7 +5,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = myMenu;
+exports["default"] = menuRestaurant;
 
 var methods = _interopRequireWildcard(require("./methods"));
 
@@ -17,4 +17,29 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function myMenu() {}
+function menuRestaurant() {
+  var centerInfo = methods.divCreate("", "center-info");
+
+  function OneCard(foodname, pictureLocation, description) {
+    this.foodName = foodname;
+    this.pictureLocation = pictureLocation;
+    this.description = description;
+
+    this.card = function () {
+      var wholeCard = methods.divCreate("", "card");
+      wholeCard.append(methods.h2Create(foodname, "h3-card"), methods.divCreate(pictureLocation, "img-card"), methods.pCreate(description, "card-desc"));
+      return wholeCard;
+    };
+  }
+
+  ;
+  var steak = new OneCard("steak", "none", _text["default"].steak);
+  var soup = new OneCard("soup", "none", _text["default"].soup);
+  var chicken = new OneCard("steak", "none", _text["default"].chicken);
+  var pork = new OneCard("steak", "none", _text["default"].pork);
+  var rice = new OneCard("steak", "none", _text["default"].rice);
+  var wine = new OneCard("steak", "none", _text["default"].wine);
+  var beer = new OneCard("steak", "none", _text["default"].beer);
+  centerInfo.append(steak.card(), soup.card(), chicken.card(), pork.card(), rice.card(), wine.card(), beer.card());
+  return centerInfo;
+}
