@@ -25,6 +25,12 @@ exports["default"] = contactRest;
 
 var methods = _interopRequireWildcard(require("./methods"));
 
+var _text = _interopRequireDefault(require("./text"));
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
 function _getRequireWildcardCache() {
   if (typeof WeakMap !== "function") return null;
   var cache = new WeakMap();
@@ -70,4 +76,13 @@ function _interopRequireWildcard(obj) {
   return newObj;
 }
 
-function contactRest() {}
+function contactRest() {
+  var centerInfo = methods.divCreate("", "center-info");
+  var contactInfo = methods.divCreate("", "contact-info");
+  var name = methods.h2Create(_text["default"].contName, "cont-name");
+  var number = methods.h2Create(_text["default"].contNum, "number");
+  var email = methods.h2Create(_text["default"].contEmail, "email");
+  contactInfo.append(name, number, email);
+  centerInfo.append(contactInfo);
+  return centerInfo;
+}

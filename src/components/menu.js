@@ -20,7 +20,11 @@ export default function menuRestaurant() {
   }
   const steak = new OneCard("Steak on butter", food().steak, text.steak);
   const soup = new OneCard("Tomato soup", food().soup, text.soup);
-  const chicken = new OneCard("Fresh chicken with salad", food().chicken, text.chicken);
+  const chicken = new OneCard(
+    "Fresh chicken with salad",
+    food().chicken,
+    text.chicken
+  );
   const pork = new OneCard("Pork with pepper sauce", food().pork, text.pork);
   const rice = new OneCard("Asien special rice", food().rice, text.rice);
   const wine = new OneCard("Red wine", food().wine, text.wine);
