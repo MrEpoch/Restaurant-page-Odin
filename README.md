@@ -4,4 +4,6 @@ Few weeks ago i found Odin project as best learning platform for me, i took edx 
 
 ---
 
-In this repo i will make project of restaurant page with webpack and npm
+This project was my practice of using webpack, i made my entire code in JavaScript and made few more js files in components.
+
+My most important files was methods.js in components althrough it took me only while to create, it made my code many times easier to write.
