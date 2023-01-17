@@ -18,6 +18,9 @@ var text = {
   rice: "Our rice carries ancient chine traditional cuisine with chicken",
   wine: "Red wine with most delicate process and taste like no other",
   beer: "Our beer is delivered from best breveries in the locality",
+  contName: "MrEpoch NoCompany",
+  contEmail: "nocompany@Nomail.no",
+  contNum: "+111 222 333",
 };
 var _default = text;
 exports["default"] = _default;

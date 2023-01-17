@@ -27,7 +27,7 @@ body {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 10% 3fr 6%;
+  grid-template-rows: 0.1fr 3fr 0.01fr;
 }
 
 nav {
@@ -70,6 +70,10 @@ main {
 }
 
 .center-info {
+  color: rgb(239, 239, 239);
+  background: url(./components/images/wood.jpg);
+  background-position: center;
+  background-size: cover;
   border-top: 2px solid var(--border-black-color);
   grid-column: 2 / 3;
   background-color: white;
@@ -134,16 +138,19 @@ main {
 
 footer {
   border-top: 2px solid var(--border-black-color);
-  background-color: var(--side-color);
 }
 
 .footer-content {
+  width: 80%;
+  font-size: 15px;
   display: flex;
   justify-content: flex-start;
   border-bottom: 20px solid transparent;
 }
 
 .card {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.755);
   margin: 30px;
   width: 40%;
   border: 4px solid black;
@@ -171,4 +178,22 @@ footer {
   font-style: italic;
   width: 80%;
   padding: 15px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+
+.contact-info > h2 {
+  background-color: rgba(255, 255, 255, 0.834);
+  color: black;
+  padding: 20px;
+  width: 50%;
+  border: 3px solid gray;
+  border-radius: 15px;
 }
