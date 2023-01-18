@@ -27,15 +27,14 @@ body {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 0.1fr 3fr 0.01fr;
+  grid-template-rows: 80px 10fr 0.01fr;
 }
 
 nav {
   width: 100%;
   grid-row: 1 / 2;
-  display: grid;
-  grid-template-columns: 1fr repeat(3, 2fr);
-  justify-items: center;
+  display: flex;
+  justify-content: space-around;
 }
 
 nav > h4 {
@@ -47,18 +46,6 @@ nav > h4 {
 nav > h4:hover {
   color: var(--main-color);
   cursor: pointer;
-}
-
-.logo-container {
-  display: flex;
-  justify-content: flex-start;
-  height: 75%;
-  width: 80%;
-}
-
-.logo-container > img {
-  width: 85%;
-  height: 100%;
 }
 
 main {
@@ -76,12 +63,10 @@ main {
   background-size: cover;
   border-top: 2px solid var(--border-black-color);
   grid-column: 2 / 3;
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-}
+  justify-content: space-between;}
 
 .h2-info-content {
   text-align: center;
