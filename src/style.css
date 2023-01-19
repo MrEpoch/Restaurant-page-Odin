@@ -1,16 +1,26 @@
+/* Made by MrEpoch */
+
+/* As first i got rid of some default browser styling */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* I imported two fonts, "Roboto" and "Dancing script" */
+
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+/* I defined few colors in root, they are later used */
 
 :root {
   --main-color: #22c55e;
   --side-color: #bbf7d095;
   --border-black-color: rgba(0, 0, 0, 0.54);
 }
+
+/* Roboto is used on all of body */
 
 html {
   width: 100%;
@@ -23,12 +33,16 @@ body {
   width: 100%;
 }
 
+/* src is my main div in which is my whole code it is grid which is only one column and three rows */
+
 .src {
   height: 100%;
   width: 100%;
   display: grid;
   grid-template-rows: 80px 10fr 0.01fr;
 }
+
+/* nav is element of navbar it has width of 100% and takes first row and displays flex with items placed space around */
 
 nav {
   width: 100%;
@@ -37,16 +51,22 @@ nav {
   justify-content: space-around;
 }
 
+/* all h4 elements inside nav have 25px and letter spacing of 1px */
+
 nav > h4 {
   align-self: center;
   font-size: 25px;
   letter-spacing: 1px;
 }
 
+/* when someone hovers above h4 elements inside of nav it will change to the main color which is green now, and cursor changes to pointer */
+
 nav > h4:hover {
   color: var(--main-color);
   cursor: pointer;
 }
+
+/* Main is in middle and takes 2. row of src div, it displays grid and with 3 columns is in background loaded image of some restaurant from unsplash */
 
 main {
   display: grid;
@@ -55,6 +75,8 @@ main {
   background-position: center;
   background-size: cover;
 }
+
+/* In middle of main grid and has white color with wood background picture, it has at top black border and it displays flex with space between */
 
 .center-info {
   color: rgb(239, 239, 239);
@@ -66,7 +88,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;}
+  justify-content: space-between;
+}
+
+/* all h2 inside of center-info have font-family "dancing script" and size 55px */
 
 .h2-info-content {
   text-align: center;
@@ -74,11 +99,15 @@ main {
   font-size: 55px;
 }
 
+/* info content about something has font-style itacil and font-size 20px with 30px padding, it is only in about */
+
 .info-content {
   padding: 30px;
   font-style: italic;
   font-size: 20px;
 }
+
+/* rainbow line in middle has height of 8px, it is only in about */
 
 .dividing-line {
   width: 100%;
@@ -104,6 +133,8 @@ main {
   background-repeat: no-repeat;
 }
 
+/* all what starts with time is mainly for opening and closing times */
+
 .time-container {
   width: 100%;
   display: flex;
@@ -121,6 +152,8 @@ main {
   font-size: 17px;
 }
 
+/* footer and footer-contant are few filler words at footer */
+
 footer {
   border-top: 2px solid var(--border-black-color);
 }
@@ -132,6 +165,8 @@ footer {
   justify-content: flex-start;
   border-bottom: 20px solid transparent;
 }
+
+/* all thing with name card are on menu items */
 
 .card {
   color: black;
@@ -164,6 +199,8 @@ footer {
   width: 80%;
   padding: 15px;
 }
+
+/* all named contact is for contact, some random stuff i filled in that place */
 
 .contact-info {
   display: flex;

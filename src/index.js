@@ -59,11 +59,7 @@ const footerRestaurant = () => {
 
 // Here i give to the nav from object navMenu restaurant name, contact, menu, later it it be possible to click on it
 
-navbar.append(
-  navMenu.restaurant,
-  navMenu.contact,
-  navMenu.menu
-);
+navbar.append(navMenu.restaurant, navMenu.contact, navMenu.menu);
 
 // navBarChildren takes navbar.children which is returns object which holds all children of navbar
 
@@ -79,7 +75,7 @@ const menuBtn = navBarChildren["2"];
 // When someone clicks on aboutBtn then content becomes empty, mainLoad is changed to aboutRestaurant() and content is changed to aboutRestaurant()
 
 aboutBtn.addEventListener("click", () => {
-  if(mainLoad !== aboutRestaurant()) {
+  if (mainLoad !== aboutRestaurant()) {
     content.innerHTML = "";
     mainLoad = aboutRestaurant();
     content.append(mainLoad);
