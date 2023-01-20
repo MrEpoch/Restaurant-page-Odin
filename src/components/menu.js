@@ -1,9 +1,18 @@
+// Inside of this file i created my menu of for content of page
+
+// I imported all my important text and methods, even images from food-images
+
 import * as methods from "./methods";
 import text from "./text";
 import food from "./food-images";
 
+// i created menuRestaurant() which returns centerInfo which holds all important parts of menu
+
 export default function menuRestaurant() {
   const centerInfo = methods.divCreate("", "center-info");
+
+  // I used
+
   function OneCard(foodname, pictureLocation, description) {
     this.foodName = foodname;
     this.pictureLocation = pictureLocation;

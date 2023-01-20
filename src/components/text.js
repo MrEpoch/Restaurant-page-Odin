@@ -1,3 +1,6 @@
+// To not make code on other files too long, i used one file on which i have my important text
+
+
 const text = {
   MainInfo:
     "We are restaurant with long lasting tradition, we are famous for beautiful place, forest, mountains, rivers are us. For many years we bring best possible to your plates and with good prices, we restaurant One Time are one of most enjoyable things you on your little travelling adventure can have. ",

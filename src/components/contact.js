@@ -1,3 +1,5 @@
+// This page loads everything for my contact page
+
 import * as methods from "./methods";
 import text from "./text";
 

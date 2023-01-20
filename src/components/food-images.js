@@ -1,3 +1,5 @@
+// In this file are my images for menu items loaded
+
 import * as methods from "./methods";
 import steakImg from "./images/steak.jpg";
 import porkImg from "./images/pork.jpg";
@@ -6,6 +8,8 @@ import riceImg from "./images/rice.jpg";
 import beerImg from "./images/beer.jpg";
 import wineImg from "./images/wine.jpg";
 import chickenImg from "./images/chicken.jpg";
+
+// It simply returns <img> <img> with location of used picture
 
 export default function foodCreate() {
   const steak = methods.ImgCreate(steakImg);
